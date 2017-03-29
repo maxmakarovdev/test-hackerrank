@@ -1,23 +1,19 @@
 package w30;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-public class Poles {
+public class IV_Poles {
 
     public static void main(String[] args) {
         List<Pole> poles = new ArrayList<>();
 
         //read data
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int k = in.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int k = scanner.nextInt();
         for (int a0 = 0; a0 < n; a0++) {
-            int a = in.nextInt();
-            int w = in.nextInt();
+            int a = scanner.nextInt();
+            int w = scanner.nextInt();
             poles.add(new Pole(a, w));
         }
 

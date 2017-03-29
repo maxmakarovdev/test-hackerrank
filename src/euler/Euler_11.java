@@ -1,21 +1,17 @@
 package euler;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.Scanner;
 
 public class Euler_11 {
 
     private static final int N = 20;
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int[][] g = new int[N][N];
         for(int i=0; i < N; i++){
             for(int j=0; j < N; j++){
-                g[i][j] = in.nextInt();
+                g[i][j] = scanner.nextInt();
             }
         }
         int maxMult = 0;

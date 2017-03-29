@@ -1,25 +1,24 @@
 package w30;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Scanner;
 
-public class RangeModQueries {
+public class V_RangeModQueries {
 
     private static int PRECALC_SIZE = 1000;
     private static int[][] preCalcMods; //number_index, mods (x : y)
 
     public static void main(String[] args) throws IOException {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int q = in.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int q = scanner.nextInt();
         int[] a = new int[n];
         int[] mods;
         preCalcMods = new int[n][PRECALC_SIZE];
         for (int a_i = 0; a_i < n; a_i++) {
-            a[a_i] = in.nextInt();
+            a[a_i] = scanner.nextInt();
             mods = new int[PRECALC_SIZE];
             for (int j = 1; j < PRECALC_SIZE; j++) {
                 if ((j & (j - 1)) != 0) {
@@ -34,10 +33,10 @@ public class RangeModQueries {
         int left, right, x, y, i, count;
         OutputStream out = new BufferedOutputStream(System.out);
         for (int a0 = 0; a0 < q; a0++) {
-            left = in.nextInt();
-            right = in.nextInt();
-            x = in.nextInt();
-            y = in.nextInt();
+            left = scanner.nextInt();
+            right = scanner.nextInt();
+            x = scanner.nextInt();
+            y = scanner.nextInt();
 
             count = 0;
             if (x < PRECALC_SIZE) {

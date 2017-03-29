@@ -1,3 +1,5 @@
+package w30;
+
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -5,7 +7,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class SubstringQueries_SuffixTree {
+public class VII_SubstringQueries_SuffixTree {
 
     public static HashMap<Integer, Integer> resultsMap = new HashMap<>();
     public static HashMap<char[], Suffix[]> suffixTrees = new HashMap<>();
@@ -15,7 +17,8 @@ public class SubstringQueries_SuffixTree {
         int n = in.nextInt();
         int q = in.nextInt();
         char[][] s = new char[n][];
-        char[] str; int len;
+        char[] str;
+        int len;
         for (int s_i = 0; s_i < n; s_i++) {
             str = in.next().toCharArray();
             s[s_i] = str;
@@ -63,7 +66,7 @@ public class SubstringQueries_SuffixTree {
                 return s[p + i] - t[q + i];
         }
         if (s.length - p < t.length - q) return -1;
-        //else if (s.length - p > t.length - q) return +1; //optimization
+            //else if (s.length - p > t.length - q) return +1; //optimization
         else return 0;
     }
 

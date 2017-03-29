@@ -1,17 +1,13 @@
 package euler;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.Scanner;
 
 public class Euler_9 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int t = in.nextInt();
-        for (int a0 = 0; a0 < t; a0++) {
-            int n = in.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+        for (int i = 0; i < t; i++) {
+            int n = scanner.nextInt();
             System.out.println(calcSumPifagorThree(n));
         }
     }

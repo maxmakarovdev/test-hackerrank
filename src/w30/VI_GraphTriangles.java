@@ -1,10 +1,14 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+package w30;
 
-public class GraphTriangles {
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class VI_GraphTriangles {
 
     private static ArrayList<SubG> subGraphs;
     private static OutputStream out;
@@ -118,7 +122,7 @@ public class GraphTriangles {
             }
         }
 
-        if(maxScore >= 0){
+        if (maxScore >= 0) {
             a = subGraphs.get(ag);
             b = subGraphs.get(bg);
 
@@ -170,10 +174,10 @@ public class GraphTriangles {
             }
         }
 
-        String getV(){
+        String getV() {
             String str = "";
             for (Integer integer : v) {
-                str+=integer+ " ";
+                str += integer + " ";
             }
             return str;
         }

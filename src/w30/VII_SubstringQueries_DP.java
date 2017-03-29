@@ -1,10 +1,12 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+package w30;
 
-public class SubstringQueries_DP {
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class VII_SubstringQueries_DP {
 
     public static HashMap<Integer, Integer> map = new HashMap<>();
 
@@ -74,11 +76,11 @@ public class SubstringQueries_DP {
         int maxLen = 0;
         int fl = first.length();
         int sl = second.length();
-        int[][] table = new int[fl+1][sl+1];
+        int[][] table = new int[fl + 1][sl + 1];
 
         for (int i = 1; i <= fl; i++) {
             for (int j = 1; j <= sl; j++) {
-                if (first.charAt(i-1) == second.charAt(j-1)) {
+                if (first.charAt(i - 1) == second.charAt(j - 1)) {
                     table[i][j] = table[i - 1][j - 1] + 1;
                     if (table[i][j] > maxLen)
                         maxLen = table[i][j];
