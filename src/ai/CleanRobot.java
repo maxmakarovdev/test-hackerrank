@@ -10,7 +10,7 @@ public class CleanRobot {
 
     static void displayPathtoPrincess(Point bot, List<Point> dirty){
         Point nearest = new Point();
-        int neasertDist = Integer.MAX_VALUE;
+        int nearestDist = Integer.MAX_VALUE;
         for(Point p : dirty){
             int dx = bot.x - p.x;
             int dy = bot.y - p.y;
@@ -18,8 +18,8 @@ public class CleanRobot {
                 System.out.println("CLEAN");
                 return;
             }
-            if(Math.abs(dx) + Math.abs(dy) < neasertDist){
-                neasertDist = Math.abs(dx) + Math.abs(dy);
+            if(Math.abs(dx) + Math.abs(dy) < nearestDist){
+                nearestDist = Math.abs(dx) + Math.abs(dy);
                 nearest = p;
             }
         }

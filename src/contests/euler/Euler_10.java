@@ -1,4 +1,4 @@
-package euler;
+package contests.euler;
 
 import java.io.IOException;
 import java.util.Arrays;

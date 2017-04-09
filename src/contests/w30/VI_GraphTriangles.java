@@ -1,4 +1,4 @@
-package w30;
+package contests.w30;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;

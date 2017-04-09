@@ -1,4 +1,4 @@
-package euler;
+package contests.euler;
 
 import java.util.Calendar;
 import java.util.Scanner;

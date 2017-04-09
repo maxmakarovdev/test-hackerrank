@@ -1,26 +1,19 @@
-package euler;
+package contests.euler;
 
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Euler_20 {
+public class Euler_15 {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int t = scan.nextInt();
         for (int i = 0; i < t; i++) {
             int n = scan.nextInt();
-            System.out.println(countSumDigits(fact(intToBigInt(n))));
+            int m = scan.nextInt();
+            BigInteger result = fact(intToBig(n + m)).divide(fact(intToBig(m))).divide(fact(intToBig(n))).mod((BigInteger.valueOf(1000000007)));
+            System.out.println(result.longValue());
         }
-    }
-
-    private static int countSumDigits(BigInteger number) {
-        String digits = number.toString();
-        int sum = 0;
-        for (int i = 0; i < digits.length(); i++) {
-            sum += digits.charAt(i) - '0';
-        }
-        return sum;
     }
 
     private static BigInteger fact(BigInteger n) {
@@ -34,7 +27,7 @@ public class Euler_20 {
         return result;
     }
 
-    private static BigInteger intToBigInt(int n) {
+    private static BigInteger intToBig(int n) {
         return BigInteger.valueOf((long) n);
     }
 }
