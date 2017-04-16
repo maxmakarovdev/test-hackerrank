@@ -38,7 +38,7 @@ public class IntermediateToProficientChallenge_2 {
     }
 
     static boolean isStringsTwins(String a, String b) {
-        Pair[] countTable = new Pair[26]; //alphabet, a to z, with even and odd includes in string a
+        Pair[] countTable = new Pair[26]; //alphabet, x to z, with even and odd includes in string x
         for (int i = 0; i < 26; i++) {
             countTable[i] = new Pair();
         }

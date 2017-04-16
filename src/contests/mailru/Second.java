@@ -63,7 +63,7 @@ public class Second {
                         a[i][j] = c;
                     }
                 }
-                //printMatrix(n, m, a);
+                //printMatrix(n, m, x);
                 //System.out.println();
             }
         }

@@ -112,7 +112,7 @@ public class VI_GraphTriangles {
                 bScore = (double) b.triangles / b.v.size();
                 sumScore = (double) (a.triangles + b.triangles) / sum.size();
 
-                //System.out.println("a: "+a.getV() + " b: " + b.getV() + " scoreA: "+ aScore + " scoreB: " + bScore + " sumScore: "+ sumScore);
+                //System.out.println("x: "+x.getV() + " b: " + b.getV() + " scoreA: "+ aScore + " scoreB: " + bScore + " sumScore: "+ sumScore);
 
                 if (sum.size() < (a.v.size() + b.v.size()) && sumScore >= aScore && sumScore >= bScore && sumScore >= maxScore) {
                     maxScore = sumScore;
@@ -126,13 +126,13 @@ public class VI_GraphTriangles {
             a = subGraphs.get(ag);
             b = subGraphs.get(bg);
 
-            //System.out.println("collapse with max score:" + maxScore + " : "+a.getV() + " into " + b.getV());
-            //System.out.println("atriangles"+a.triangles);
+            //System.out.println("collapse with max score:" + maxScore + " : "+x.getV() + " into " + b.getV());
+            //System.out.println("atriangles"+x.triangles);
             //System.out.println("btriangles"+b.triangles);
 
             a.v.addAll(b.v);
             a.triangles += b.triangles;
-            //System.out.println("sumtriangles"+a.triangles);
+            //System.out.println("sumtriangles"+x.triangles);
             subGraphs.remove(bg);
             collapse();
         }
